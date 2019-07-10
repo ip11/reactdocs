@@ -29,11 +29,12 @@ class App extends React.Component{
     }
 
 	render(){
-		
+		let newsFiltered =  this.state.filtered;
+		let newsWhole =  this.state.news;
 		return (
 		<div>
 			<Header keywords = {this.getKeyword}/>
-			<NewsList news={this.state.filtered.length ===0 ? this.state.news : this.state.filtered}>
+			<NewsList news={newsFiltered.length ===0 ? newsWhole : newsFiltered}>
 				<h3> The News are :</h3>
 			</NewsList>
 		</div>
